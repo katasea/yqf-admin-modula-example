@@ -1,0 +1,6 @@
+test:
+  service:
+    forfun:
+      DEFAULT.1.0: {"bean":"testSrvImpl","method":"testService"}
+    getUser:
+      DEFAULT.1.0: {"bean":"testSrvImpl","method":"testUserRepository"}
