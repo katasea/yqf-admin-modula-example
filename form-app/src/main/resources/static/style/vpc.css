@@ -1,0 +1,70 @@
+.bgImg{background:url(../image/vpc/bg_blue.jpg) no-repeat center fixed;background-size:auto}
+.tpImg{background:url(../image/vpc/jTitle001.jpg) repeat center fixed;background-size:auto}
+.bgSquare{background:url(../image/vpc/square.gif) center fixed;background-size:auto}
+.footer {height:24px;line-height:24px;text-align:center;font-size:12px;color:#666;background:#fff;}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td
+{
+    padding: 0;
+    margin: 0;
+}
+body{background:#fff;color:#333;font:12px/1.5 "宋体",Arial, Helvetica, sans-serif;}
+div,form,ul,ol,li,span,p,img {
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+a{outline:none;text-decoration:none}
+.fl{float:left;}
+.fr{float:right;}
+
+.top_left {	width: 650px;height:30px; text-align:left;}
+.top_left .sys_name{font:16px "宋体",Arial,  Helvetica, sans-serif;font-weight:bold; color:#15428b; line-height:30px; margin-left:10px;}
+.top_left .info{ color:#15428b; line-height:30px; margin-left:10px;font:12px "宋体",Arial,  Helvetica, sans-serif;}
+
+.top_right {height: 30px;}
+.ic01{background-position:0px 0px;}
+.ic02{background-position:-30px 0px;}
+.ic03{background-position:-60px 0px;}
+.ic04{background-position:-90px 0px;}
+.ic05{background-position:-120px 0px;}
+.ic06{background-position:-150px 0px;}
+.ic07{background-position:-180px 0px;}
+.ic08{background-position:-210px 0px;}
+.ic09{background-position:-240px 0px;}
+.ic10{background-position:-270px 0px;}
+.top_right a{color: #2108a3; text-decoration:none; display:block;
+    line-height:30px; height:30px;
+    padding-left:10px;}
+.top_right a:hover {text-decoration:none; background:#cfddf0;}
+.top_right a.current{text-decoration:none; background:#c6d6ec;}
+
+.ic{ width:69px; color:#416aa3; font-size:12px; margin-left:1px;}
+.ic span{display:block; height:30px; line-height:30px;}
+.txt{ color: #142d41;font-size:12px;line-height:30px; padding-right:10px; padding-left:10px;}
+.x-form-multiselect-body .x-boundlist .x-mask {
+    background: none;
+}
+
+.x-form-itemselector-body .x-form-item {
+    margin: 0;
+}
+
+.x-form-itemselector-top {
+    background-image: url(../image/ux/top2.gif);
+}
+.x-form-itemselector-up {
+    background-image: url(../image/ux/up2.gif);
+}
+.x-form-itemselector-add {
+    background-image: url(../image/ux/right2.gif);
+}
+.x-form-itemselector-remove {
+    background-image: url(../image/ux/left2.gif);
+}
+.x-form-itemselector-down {
+    background-image: url(../image/ux/down2.gif);
+}
+.x-form-itemselector-bottom {
+    background-image: url(../image/ux/bottom2.gif);
+}

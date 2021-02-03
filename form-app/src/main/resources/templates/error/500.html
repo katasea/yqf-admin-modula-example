@@ -1,1 +1,37 @@
-﻿你自己的500页面
+<!DOCTYPE html>
+<html  xmlns:th=http://www.thymeleaf.org>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INSPINIA | 500 Error</title>
+
+    <link rel="stylesheet" th:href="@{/style/theme/css/bootstrap.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/style/theme/font-awesome-4.7.0/css/font-awesome.min.css}" type="text/css"/>
+    <link th:href="@{/style/inspinia/animate.css}" rel="stylesheet">
+    <link th:href="@{/style/inspinia/style.css}" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+
+
+<div class="middle-box text-center animated fadeInDown">
+    <h1>500</h1>
+    <h3 class="font-bold">服务器内部错误</h3>
+
+    <div class="error-desc">
+        非常抱歉！由于某些原因服务器内部出错了。如果您刷新后还是如此，请联系管理员反馈！我们会第一时间修复！<br/>
+        <!--点此进行反馈问题: <br/><a href="#" class="btn btn-primary m-t">发送错误</a>-->
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script th:src="@{/style/theme/js/jquery.min.js}"></script>
+<!-- Bootstrap -->
+<script th:src="@{/style/theme/js/bootstrap.js}"></script>
+</body>
+
+</html>

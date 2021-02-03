@@ -1,0 +1,10 @@
+.bg{background:url(../image/vpc/login_bg2.jpg) no-repeat center fixed;background-size:auto}
+.op-black {
+        opacity: 0.82; background-color: gainsboro;
+    }
+.center {
+        width: auto;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+}

@@ -32,7 +32,7 @@ public class ControllerInterceptor {
 	 * ~ .. 匹配任意数量的参数.
 	 */
 
-	@Pointcut("execution(public * com.main.controller..*.*(..))")
+	@Pointcut("execution(public * cn.business.main.handler..*.*(..))")
 
 	public void webLog() {
 	}

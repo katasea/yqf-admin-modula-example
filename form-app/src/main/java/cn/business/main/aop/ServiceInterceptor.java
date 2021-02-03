@@ -36,7 +36,7 @@ public class ServiceInterceptor {
      * ~ .. 匹配任意数量的参数.
      */
 
-    @Pointcut("execution(public * com.main.service.platform.impl.*.*(..))")
+    @Pointcut("execution(public * cn.business.main.service.impl..*.*(..))")
 
     public void Log() {
     }
