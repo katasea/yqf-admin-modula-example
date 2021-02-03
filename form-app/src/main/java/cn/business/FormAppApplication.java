@@ -15,7 +15,11 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class FormAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FormAppApplication.class, args);
+		try {
+			SpringApplication.run(FormAppApplication.class, args);
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

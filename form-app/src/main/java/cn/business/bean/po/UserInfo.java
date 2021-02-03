@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.validation.constraints.NotNull;
 
 @Data
-@TableName("MCM_USER_INFO")
+@TableName("FORM_USER_INFO")
 public class UserInfo {
 
     @NotNull

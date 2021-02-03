@@ -4,8 +4,8 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
-    <changeSet id="tpl-20190910-001" author="yhbf">
-        <createTable tableName="MCM_USER_INFO">
+    <changeSet id="tpl-20190910-001" author="yqf">
+        <createTable tableName="FORM_USER_INFO">
             <column name="MINDEX_ID" type="VARCHAR(128)">
                 <constraints primaryKey="true" primaryKeyName="PK_MCM_USER_INFO" nullable="false"/>
             </column>
