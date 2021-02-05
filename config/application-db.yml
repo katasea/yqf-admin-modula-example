@@ -1,0 +1,26 @@
+yqf:
+  admin:
+    login_url: http://127.0.0.1:8000/yqf-admin/login
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1213407568
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/pm?useSSL=true&useUnicode=true&characterEncoding=UTF8&serverTimezone=GMT&allowMultiQueries=true
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: slo
+logging:
+  level:
+    com:
+      baomidou:
+        mybatisplus: DEBUG
+      wf:
+        ew: DEBUG
+    org:
+      springframework:
+        security: DEBUG
+

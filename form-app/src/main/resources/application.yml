@@ -1,0 +1,84 @@
+web:
+  interceptor:
+    ignore:
+      portal:
+        - /index
+        - /js/*
+        - /css/*
+        - /health
+        - /api/**
+        - /view/log/*
+        - /error
+        - /userCenter/**
+  login:
+    valid:
+      enable: 1
+server:
+  port: 8001
+  servlet:
+    context-path: /${spring.application.name}
+spring:
+  application:
+    name: yqf-admin-modula-form
+  activemq:
+    broker-url: tcp://127.0.0.1:61616
+    password: admin
+    pool:
+      enabled: false
+      expiry-timeout: 100000
+      idle-timeout: 30000
+      max-connections: 100
+    user: admin
+  datasource:
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    filters: stat,wall,slf4j
+    initialSize: 10
+    maxActive: 20
+    maxPoolPreparedStatementPerConnectionSize: 20
+    maxWait: 60000
+    minEvictableIdleTimeMillis: 300000
+    minIdle: 8
+    name: AIO-DataSource
+    poolPreparedStatements: true
+    timeBetweenEvictionRunsMillis: 60000
+    useGlobalDataSourceStat: true
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+  liquibase:
+    change-log: classpath:/db/master.xml
+    enabled: true
+  profiles:
+    active: dev
+    include: db
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+    mode: LEGACYHTML5
+    prefix: classpath:/templates/
+    suffix: .html
+druid:
+  loginPassword: report
+  loginUsername: report
+jms:
+  pub-sub-domain: false
+logging:
+  config: config/logback-${spring.profiles.active}.xml
+mybatis-plus:
+  configuration:
+    cache-enabled: false
+    database-id: mysql
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      capital-mode: true
+      column-underline: true
+      field-strategy: not_empty
+      id-type: uuid
+    refresh: true
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: cn.business.bean.po,cn.business.main.mapper
+
+

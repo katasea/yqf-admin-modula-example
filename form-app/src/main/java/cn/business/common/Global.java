@@ -19,6 +19,7 @@ public class Global {
 	public static final String FILE_UPLOADPATH = "/FileCenter/upload";//文件上传路径
 	public static final String FILE_UPTEMPPATH = "/FileCenter/temp";//文件临时上传路径
 	public static final String NULLSTRING = "";//""字符串
+	public static final String TOKENHEADER = "token";
 	public static Map<String,String> isCreatedTable = new HashMap<>();//记录当年是否已经创建了表
 	public static final String VERSION = "APL.BETA[1.0.1]";
 	public static final DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//日期format

@@ -24,6 +24,8 @@ public enum HandlerType {
 	REQ_CHANNEL_TYPE_ERROR("REQ_CHANNEL_TYPE_ERROR", "支付渠道非法，未找到对应支付渠道！"),
 
 	SRV_SWITCH_EMPTY("SRV_SWITCH_EMPTY", "系统内部错误，未找到对应前置服务！"),
+	LOGIN_MTOKEN_NOFIND("LOGIN_MTOKEN_NOFIND", "系统内部错误，未找到对应的TOKEN鉴权入参！"),
+	USER_NO_LOGIN("USER_NO_LOGIN", "系统外部错误，登录已超时或未登录系统，请重新登录！"),
 
 	SYSTEM_ERROR("SYSTEM_ERROR", "系统内部错误"),
 	OUT_SYSTEM_ERROR("OUT_SYSTEM_ERROR", "系统外部错误");

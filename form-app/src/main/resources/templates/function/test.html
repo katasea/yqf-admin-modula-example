@@ -4,25 +4,22 @@
 <body>
 <!-- 这里引入自己的js文件，必须要有入口方法  init  -->
 <script type="text/javascript">
-    Ext.application({
-        name: 'AM',
-        appFolder: 'app',
-        launch: function () {
-            Ext.BLANK_IMAGE_URL = blank_img_url;
 
-            Ext.create('Ext.container.Viewport', {
-                layout : "fit",
-                id: 'vpcViewport',
-                border: '0 0 0 0',
-                //自定义方块背景
-                cls: "bgSquare",
-                items : {
-                    xtype: 'panel',
-                    title: 'Users',
-                    html: 'List of users will go here'
-                }
-            });
-        }
+    Ext.onReady(function(){
+        Ext.BLANK_IMAGE_URL = blank_img_url;
+
+        Ext.create('Ext.container.Viewport', {
+            layout : "fit",
+            id: 'vpcViewport',
+            border: '0 0 0 0',
+            //自定义方块背景
+            cls: "bgSquare",
+            items : {
+                xtype: 'panel',
+                title: 'Users',
+                html: 'List of users will go here'
+            }
+        });
     });
 </script>
 </body>
