@@ -40,10 +40,18 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
 			String tokenParam = String.valueOf(request.getSession().getAttribute(Global.TOKENHEADER));
 			if(CommonUtil.isEmpty(tokenParam)) {
 				tokenParam = request.getParameter(Global.TOKENHEADER);
+				if (CommonUtil.isNotEmpty(tokenParam)) {
+					//不为空就存放于session方便后续接口不需要传递token
+					//这边注意 避免每次都放入session，会造成永远不会登录过期或登录过期时间与admin不符合。
+					request.getSession().setAttribute(Global.TOKENHEADER, tokenParam);
+				}
 			}
 
-			if (StringUtils.isNotBlank(tokenParam)) {
-				//验证tokenParam是否正确
+			if (CommonUtil.isEmpty(tokenParam)) {
+				log.info("未发现HEADER入参 ： " + Global.TOKENHEADER);
+				return this.responseFalse(response, HandlerType.LOGIN_MTOKEN_NOFIND);
+			} else {
+				// 验证tokenParam是否正确
 				try {
 					JSONObject userInfo = JSONObject.parseObject((String) redisTemplate.opsForValue().get(tokenParam));
 
@@ -57,9 +65,6 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
 					e.printStackTrace();
 					return this.responseFalse(response, HandlerType.SYSTEM_ERROR);
 				}
-			} else {
-				log.info("未发现HEADER入参 ： " + Global.TOKENHEADER);
-				return this.responseFalse(response, HandlerType.LOGIN_MTOKEN_NOFIND);
 			}
 		}
 	}
