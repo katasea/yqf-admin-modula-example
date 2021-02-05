@@ -40,28 +40,44 @@ public class MyFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse resp = (HttpServletResponse) response;
+		//配置参数打开 过滤登录开关
 		if (enableFilter != 0) {
-			String tokenParam = String.valueOf(req.getSession().getAttribute(cn.business.common.Global.TOKENHEADER));
+			//先从session获取token 如果没有的话再从入参中获取
+			String tokenParam = String.valueOf(req.getSession().getAttribute(Global.TOKENHEADER));
 			if (CommonUtil.isEmpty(tokenParam)) {
+				//再从url的入参获取token
 				tokenParam = request.getParameter(Global.TOKENHEADER);
-			}
-			try {
-				JSONObject userInfo = JSONObject.parseObject((String) redisTemplate.opsForValue().get(tokenParam));
-				if (userInfo == null) {
-					this.responseFalse(resp, HandlerType.USER_NO_LOGIN);
+
+				if (CommonUtil.isNotEmpty(tokenParam)) {
+					//不为空就存放于session方便后续接口不需要传递token
+					//这边注意 避免每次都放入session，会造成永远不会登录过期或登录过期时间与admin不符合。
+					req.getSession().setAttribute(Global.TOKENHEADER, tokenParam);
 				}
-			} catch (Exception e) {
-				e.printStackTrace();
-				this.responseFalse(resp, HandlerType.SYSTEM_ERROR);
+			}
+
+			//不可与上面if合并，否则逻辑不对。 如果session与入参都没有token值，那么提示缺少入参。
+			if (CommonUtil.isEmpty(tokenParam)) {
+				//否则就提示 缺少token入参
+				this.responseFalse(resp, HandlerType.LOGIN_MTOKEN_NOFIND);
+			} else {
+				try {
+					JSONObject userInfo = JSONObject.parseObject((String) redisTemplate.opsForValue().get(tokenParam));
+					if (userInfo == null) {
+						this.responseFalse(resp, HandlerType.USER_NO_LOGIN);
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+					this.responseFalse(resp, HandlerType.SYSTEM_ERROR);
+				}
+
 			}
 		}
-
 
 		chain.doFilter(request, response);
 	}
 
 	private boolean responseFalse(HttpServletResponse response, HandlerType handlerType) throws IOException {
-		String errorMsg = "当前模块未检测到登录信息，登录超时或未登录，请重新登录！";
+		String errorMsg = handlerType.getRetMsg();
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=utf-8");
 		ResponseVO<String> responseVO = new ResponseVO<>();
