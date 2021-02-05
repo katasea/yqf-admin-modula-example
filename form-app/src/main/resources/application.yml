@@ -3,13 +3,12 @@ web:
     ignore:
       portal:
         - /index
-        - /js/*
-        - /css/*
-        - /health
+        - /extjs/*
+        - /image/*
+        - /style/*
         - /api/**
         - /view/log/*
         - /error
-        - /userCenter/**
   login:
     valid:
       enable: 1
