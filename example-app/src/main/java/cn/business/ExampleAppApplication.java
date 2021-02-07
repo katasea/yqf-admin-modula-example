@@ -12,11 +12,11 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @MapperScan(basePackages = "cn.business.main.mapper")
 @EnableTransactionManagement
-public class FormAppApplication {
+public class ExampleAppApplication {
 
 	public static void main(String[] args) {
 		try {
-			SpringApplication.run(FormAppApplication.class, args);
+			SpringApplication.run(ExampleAppApplication.class, args);
 		}catch (Exception e) {
 			e.printStackTrace();
 		}

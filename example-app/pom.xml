@@ -216,7 +216,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>cn.business.FormAppApplication</mainClass>
+                            <mainClass>cn.business.ExampleAppApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
