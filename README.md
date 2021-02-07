@@ -1,9 +1,9 @@
-﻿# yqf-admin-modula-form
+﻿# yqf-admin-modula-example
 
 
 项目简介
 ---------
-提供一个定制化表单，为业务系统提供服务支持，依赖于yqf-admin后台。<br>
+为业务系统提供服务支持，依赖于yqf-admin后台。<br>
 1、springboot2.x+spring+mybatis plus+swagger2+aoplog [MYSQL]
 
 2、提供统一接口，调用sdk，含加解密验签功能。 

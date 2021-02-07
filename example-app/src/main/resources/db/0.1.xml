@@ -1,0 +1,29 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+<!--    <changeSet id="tpl-20190910-001" author="yqf">-->
+<!--        <createTable tableName="FORM_USER_INFO">-->
+<!--            <column name="MINDEX_ID" type="VARCHAR(128)">-->
+<!--                <constraints primaryKey="true" primaryKeyName="PK_MCM_USER_INFO" nullable="false"/>-->
+<!--            </column>-->
+<!--            <column name="USER_NAME" type="VARCHAR(50)"/>-->
+<!--            <column name="USER_SEX" type="VARCHAR(2)"/>-->
+<!--            <column name="USER_BIRTHDAY" type="VARCHAR(10)"/>-->
+<!--            <column name="ID_TYPE" type="VARCHAR(2)"/>-->
+<!--            <column name="ID_NO" type="VARCHAR(32)"/>-->
+<!--            <column name="MOBILE_PHONE" type="VARCHAR(20)"/>-->
+<!--            <column name="TELEPHONE" type="VARCHAR(20)"/>-->
+<!--            <column name="NATION" type="VARCHAR(50)"/>-->
+<!--            <column name="CITIZEN" type="VARCHAR(50)"/>-->
+<!--            <column name="WORK_UNIT" type="VARCHAR(200)"/>-->
+<!--            <column name="ADDRESS" type="VARCHAR(200)"/>-->
+<!--            <column name="STATUS" type="VARCHAR(32)"/>-->
+<!--            <column name="CRT_DATETIME" type="VARCHAR(8)"/>-->
+<!--            <column name="CRT_APP_ID" type="VARCHAR(32)"/>-->
+<!--            <column name="CRT_TERM_ID" type="VARCHAR(32)"/>-->
+<!--        </createTable>-->
+<!--    </changeSet>-->
+</databaseChangeLog>

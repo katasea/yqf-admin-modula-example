@@ -5,8 +5,8 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.katasea</groupId>
-    <name>form-sdk</name>
-    <artifactId>form-sdk</artifactId>
+    <name>example-sdk</name>
+    <artifactId>example-sdk</artifactId>
     <version>v1.0</version>
 
     <properties>

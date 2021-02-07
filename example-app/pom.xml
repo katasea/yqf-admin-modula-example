@@ -2,12 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>cn.katasea</groupId>
-        <artifactId>yqf-admin-modula-form</artifactId>
+        <artifactId>yqf-admin-modula-example</artifactId>
         <version>v1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>form-app</artifactId>
+    <artifactId>example-app</artifactId>
 
     <dependencies>
         <dependency>
@@ -28,7 +28,7 @@
 
         <dependency>
             <groupId>cn.katasea</groupId>
-            <artifactId>form-common</artifactId>
+            <artifactId>example-common</artifactId>
             <version>v1.0</version>
         </dependency>
 

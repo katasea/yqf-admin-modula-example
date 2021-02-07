@@ -70,22 +70,22 @@ public class TestSrvImpl implements TestSrv {
 	public ResponseVO<UserInfo> testUserRepository(RequestVO requestVO) {
 		ResponseVO<UserInfo> response = new ResponseVO<>(requestVO);
 
-		try {
-			Map<String, Object> param = (Map<String, Object>) requestVO.getBizObj();
-			UserInfo userInfo = new UserInfo();
-			userInfo.setMindexId("123");
-			userInfo.setUserName("123");
-			userInfo.setUserSex("1");
-			userInfo.setIdNo("23443434");
-			userInfo.setIdType("1");
-			userInfoService.save(userInfo);
-			QueryWrapper<UserInfo> queryWrapper = new QueryWrapper<>(userInfo);
-			response.setBizObj(userInfoService.getOne(queryWrapper));
-		} catch (Exception e) {
-			e.printStackTrace();
-			response.setRetInfo(HandlerType.UNKNOWN);
-			log.error("失败了，{}" + e.toString());
-		}
+//		try {
+//			Map<String, Object> param = (Map<String, Object>) requestVO.getBizObj();
+//			UserInfo userInfo = new UserInfo();
+//			userInfo.setMindexId("123");
+//			userInfo.setUserName("123");
+//			userInfo.setUserSex("1");
+//			userInfo.setIdNo("23443434");
+//			userInfo.setIdType("1");
+//			userInfoService.save(userInfo);
+//			QueryWrapper<UserInfo> queryWrapper = new QueryWrapper<>(userInfo);
+//			response.setBizObj(userInfoService.getOne(queryWrapper));
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			response.setRetInfo(HandlerType.UNKNOWN);
+//			log.error("失败了，{}" + e.toString());
+//		}
 		return response;
 	}
 

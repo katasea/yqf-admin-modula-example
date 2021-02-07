@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.katasea</groupId>
-    <artifactId>yqf-admin-modula-form</artifactId>
+    <artifactId>yqf-admin-modula-example</artifactId>
     <packaging>pom</packaging>
     <version>v1.0</version>
     <name>yqf-admin-modula-form</name>
@@ -17,9 +17,9 @@
         <relativePath/>
     </parent>
     <modules>
-        <module>form-common</module>
-        <module>form-sdk</module>
-        <module>form-app</module>
+        <module>example-common</module>
+        <module>example-sdk</module>
+        <module>example-app</module>
     </modules>
 
     <properties>
