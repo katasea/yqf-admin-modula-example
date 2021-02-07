@@ -24,4 +24,4 @@ hs_err_pid*
 /filecenter
 *.mdf
 *.ldf
-BaseFramework.iml
+*/target
