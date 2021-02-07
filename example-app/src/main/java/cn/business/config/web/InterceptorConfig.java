@@ -18,8 +18,8 @@ public class InterceptorConfig extends WebMvcConfigurationSupport {
 	@Resource
 	private InterceptorIgnoreValue interceptorIgnoreValue;
 
-//	@Resource
-//	LoginHandlerMethodArgumentResolver userArgumentResolver;
+	@Resource
+	LoginHandlerMethodArgumentResolver userArgumentResolver;
 
 	@Resource
 	AuthenticationInterceptor authenticationInterceptor;
@@ -27,10 +27,10 @@ public class InterceptorConfig extends WebMvcConfigurationSupport {
 //	@Resource
 //	AuthorizationInterceptor authorizationInterceptor;
 
-//	@Override
-//	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
-//		argumentResolvers.add(userArgumentResolver);
-//	}
+	@Override
+	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
+		argumentResolvers.add(userArgumentResolver);
+	}
 
 	/**
 	 * 添加静态资源

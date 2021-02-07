@@ -60,6 +60,7 @@ public class LoginHandlerMethodArgumentResolver implements HandlerMethodArgument
 				// 验证tokenParam是否正确
 				try {
 					JSONObject userInfoObj = JSONObject.parseObject((String) redisTemplate.opsForValue().get(tokenParam));
+					userInfo = new UserInfo();
 					userInfo.setBean(userInfoObj);
 				}catch (Exception e) {
 					e.printStackTrace();

@@ -1,5 +1,8 @@
 package cn.business.main.handler;
 
+import cn.business.bean.po.Login;
+import cn.business.bean.po.UserInfo;
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -10,7 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class FormHandler {
 	@GetMapping("/test")
-	public String test() {
+	public String test(@Login UserInfo userInfo) {
+		System.out.println(JSONObject.toJSONString(userInfo));
 		return "function/test";
 	}
 }

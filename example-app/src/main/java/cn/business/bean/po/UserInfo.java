@@ -27,7 +27,7 @@ public class UserInfo implements Serializable {
     private List<String> resources;//还未赋值
 
     public void setBean(JSONObject o) {
-        this.setAdmin(o.getBoolean("isAdmin"));
+        this.setAdmin(o.getBoolean("admin"));
         this.setUserid(o.getString("userid"));
         this.setUsername(o.getString("username"));
         this.setYmstr(o.getString("ymstr"));
